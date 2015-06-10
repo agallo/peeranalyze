@@ -25,7 +25,10 @@ username = args.user
 keyfile = args.key
 usepass = args.p
 
-def authtype():
+def determineauthtype():
+    idtype = ""
+    authtype = ""
+    password = ""
     if username:
         idtype="userpass"
     if keyfile:
@@ -38,4 +41,4 @@ def authtype():
     print "password: " + str(password)
 
 
-authtype()
+determineauthtype()
