@@ -33,9 +33,9 @@ def authtype():
     if usepass:
         authype="password"
         password = getpass.getpass(prompt="Enter password: ")
-    print "username: " + username
-    print "keyfile: " + keyfile
-    print "password: " + password
+    print "username: " + str(username)
+    print "keyfile: " + str(keyfile)
+    print "password: " + str(password)
 
 
 authtype()
