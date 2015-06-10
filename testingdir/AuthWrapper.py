@@ -29,6 +29,7 @@ def determineauthtype():
     idtype = ""
     authtype = ""
     password = ""
+    print "**usepass value: " + str(usepass)
     if username:
         idtype="userpass"
     if keyfile:
