@@ -40,6 +40,7 @@ def determineauthtype():
     print "username: " + str(username)
     print "keyfile: " + str(keyfile)
     print "password: " + str(password)
+    return idtype, authtype, keyfile, password
 
 
 determineauthtype()
