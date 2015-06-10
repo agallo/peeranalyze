@@ -5,7 +5,7 @@ __author__ = 'agallo'
 try:
     from AuthWrapper import *
 except ImportError:
-    print "Unable to find AuthWrapper; falling back to shell username and private key")
+    print "Unable to find AuthWrapper; falling back to shell username and private key"
 
 
 from jnpr.junos import Device
