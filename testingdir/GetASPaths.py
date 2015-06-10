@@ -2,15 +2,15 @@
 
 __author__ = 'agallo'
 
+try:
+    from AuthWrapper import *
+except ImportError:
+    print "Unable to find AuthWrapper; falling back to shell username and private key")
+
 
 from jnpr.junos import Device
 from argparse import ArgumentParser
 from pprint import pprint
-
-try:
-    from AuthWrapper import *
-except ImportError:
-    raise ImportError('Unable to Import Authwrapper.  Using shell username and private sshkey for auth')
 
 # setup some command line arguments
 
