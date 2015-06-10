@@ -7,6 +7,7 @@ from argparse import ArgumentParser
 import getpass
 
 
+parser = ArgumentParser(description="Module to add flexibility to authentication options")
 
 parser.add_argument('-u', '--user', dest='user', type=str,
                     help='username for router authentication (specify if different than current shell user)')
