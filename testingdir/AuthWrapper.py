@@ -36,3 +36,6 @@ def authtype():
     print "username: " + username
     print "keyfile: " + keyfile
     print "password: " + password
+
+
+authtype()
