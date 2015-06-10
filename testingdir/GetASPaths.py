@@ -17,9 +17,9 @@ from pprint import pprint
 parser = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
                                     " a given ASN")
 
-# parser.add_argument('ASN', metavar='ASN', type=int)
+parser.add_argument('ASN', metavar='ASN', type=int)
 
-# parser.add_argument('router', metavar='target_router')
+parser.add_argument('router', metavar='target_router')
 
 
 args = parser.parse_args()
