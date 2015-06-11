@@ -2,6 +2,10 @@
 
 __author__ = 'agallo'
 
+
+from jnpr.junos import Device
+from argparse import ArgumentParser
+
 parser = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
                                     " a given ASN")
 
