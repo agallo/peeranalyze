@@ -6,6 +6,7 @@ __author__ = 'agallo'
 from jnpr.junos import Device
 from argparse import ArgumentParser
 from pprint import pprint
+from akgRoutes1 import *
 
 parser = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
                                     " a given ASN")
@@ -50,7 +51,8 @@ def getpaths(ASN, router, auser, keyfile):
         dev = Device(router, user=username, ssh_private_key_file=path2keyfile)
 
     dev.open()
-    pprint( dev.facts )
+ #  pprint( dev.facts )
+    paths = akgRoutes1(dev)
     dev.close()
 
 
