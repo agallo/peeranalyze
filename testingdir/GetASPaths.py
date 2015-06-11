@@ -14,6 +14,8 @@ from pprint import pprint
 
 # setup some command line arguments
 
+print "I made it mast the try/import/except/print block"
+
 parser = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
                                     " a given ASN")
 
