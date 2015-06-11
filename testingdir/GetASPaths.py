@@ -24,11 +24,20 @@ args = parser.parse_args()
 
 ASN = args.ASN
 router = args.router
+auser = args.user
+keyfile = args.key
 
 
-dev = Device(router)
-dev.open()
+def ASpaths(ASN, router, auser, keyfile):
+    dev = Device(router)
+    dev.open()
+    pprint( dev.facts )
+    dev.close()
 
-pprint( dev.facts )
 
-dev.close()
+
+def main():
+    ASpaths = getpaths(ASN, router, auser, keyfile)
+
+
+main()
