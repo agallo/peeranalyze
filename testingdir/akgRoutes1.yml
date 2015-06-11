@@ -1,0 +1,13 @@
+---
+akgroutes1:
+  rpc: get-route-information
+  item: route-table
+  key: rt-entry
+  view: akgRoutes
+
+akgRoutes:
+  fields:
+    lpref: local-preference
+    learnedfrom: learned-from
+    aspath: as-path
+    nexthop: to
