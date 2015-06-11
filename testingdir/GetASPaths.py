@@ -2,29 +2,21 @@
 
 __author__ = 'agallo'
 
-try:
-    from AuthWrapper import *
-except ImportError:
-    print "Unable to find AuthWrapper; falling back to shell username and private key"
-
-
-from jnpr.junos import Device
-from argparse import ArgumentParser
-from pprint import pprint
-
-# setup some command line arguments
-
-print "I made it mast the try/import/except/print block"
-
-parser2 = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
+parser = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
                                     " a given ASN")
 
-parser2.add_argument('ASN', metavar='ASN', type=int)
+parser.add_argument('ASN', metavar='ASN', type=int)
 
-parser2.add_argument('router', metavar='target_router')
+parser.add_argument('router', metavar='target_router')
+
+parser.add_argument('-u', '--user', dest='user', type=str,
+                    help='username for router authentication (specify if different than current shell user)')
+
+parser.add_argument('-k', '--key', dest='key', type=str,
+                    help='full path to ssh private key (specify if different than current shell user')
 
 
-args = parser2.parse_args()
+args = parser.parse_args()
 
 ASN = args.ASN
 router = args.router
