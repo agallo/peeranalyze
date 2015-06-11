@@ -29,7 +29,25 @@ keyfile = args.key
 
 
 def getpaths(ASN, router, auser, keyfile):
-    dev = Device(router)
+    devcommand = 0
+
+    if auser is not None:
+        username = auser
+        devcommand += 1
+
+    if keyfile is not None:
+        path2keyfile = keyfile
+        devcommand += 2
+
+    if devcommand == 0:
+        dev = Device(router)
+    elif devcommand == 1:
+        dev = Device(router, user=username)
+    elif devcommand == 2:
+        dev = Device(router, ssh_private_key_file=path2keyfile)
+    else:
+        dev = Device(router, user=username, ssh_private_key_file=path2keyfile)
+
     dev.open()
     pprint( dev.facts )
     dev.close()
