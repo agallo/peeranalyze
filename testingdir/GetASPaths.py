@@ -16,15 +16,15 @@ from pprint import pprint
 
 print "I made it mast the try/import/except/print block"
 
-parser = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
+parser2 = ArgumentParser(description="Script to pull prefixes advertised by (or through)"
                                     " a given ASN")
 
-parser.add_argument('ASN', metavar='ASN', type=int)
+parser2.add_argument('ASN', metavar='ASN', type=int)
 
-parser.add_argument('router', metavar='target_router')
+parser2.add_argument('router', metavar='target_router')
 
 
-args = parser.parse_args()
+args = parser2.parse_args()
 
 ASN = args.ASN
 router = args.router
