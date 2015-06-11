@@ -28,7 +28,7 @@ auser = args.user
 keyfile = args.key
 
 
-def ASpaths(ASN, router, auser, keyfile):
+def getpaths(ASN, router, auser, keyfile):
     dev = Device(router)
     dev.open()
     pprint( dev.facts )
