@@ -1,0 +1,46 @@
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/13.3R1/junos">
+    <route-information xmlns="http://xml.juniper.net/junos/13.3R1/junos-routing">
+        <!-- keepalive -->
+        <route-table>
+            <table-name>inet.0</table-name>
+            <destination-count>22</destination-count>
+            <total-route-count>22</total-route-count>
+            <active-route-count>16</active-route-count>
+            <holddown-route-count>0</holddown-route-count>
+            <hidden-route-count>6</hidden-route-count>
+            <rt junos:style="brief">
+                <rt-destination>10.40.40.0/24</rt-destination>
+                <rt-entry>
+                    <active-tag>*</active-tag>
+                    <current-active/>
+                    <last-active/>
+                    <protocol-name>Direct</protocol-name>
+                    <preference>0</preference>
+                    <age junos:seconds="8286868">13w4d 21:54:28</age>
+                    <nh>
+                        <selected-next-hop/>
+                        <via>fxp0.0</via>
+                    </nh>
+                </rt-entry>
+            </rt>
+            <rt junos:style="brief">
+                <rt-destination>10.40.40.100/32</rt-destination>
+                <rt-entry>
+                    <active-tag>*</active-tag>
+                    <current-active/>
+                    <last-active/>
+                    <protocol-name>Local</protocol-name>
+                    <preference>0</preference>
+                    <age junos:seconds="8286868">13w4d 21:54:28</age>
+                    <nh-type>Local</nh-type>
+                    <nh>
+                        <nh-local-interface>fxp0.0</nh-local-interface>
+                    </nh>
+                </rt-entry>
+            </rt>
+        </route-table>
+    </route-information>
+    <cli>
+        <banner></banner>
+    </cli>
+</rpc-reply>

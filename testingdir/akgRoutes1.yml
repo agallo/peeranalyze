@@ -6,8 +6,10 @@ akgRoutes1:
   view: akgRoutes
 
 akgRoutes:
-  fields:
+  groups:
+    entry: rt-entry
+  fields_entry:
     lpref: local-preference
     learnedfrom: learned-from
     aspath: as-path
-    nexthop: to
+    nexthop: nh/to
