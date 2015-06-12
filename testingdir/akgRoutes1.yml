@@ -1,8 +1,8 @@
 ---
-akgroutes1:
+akgRoutes1:
   rpc: get-route-information
-  item: route-table
-  key: rt-entry
+  item: route-table/rt
+  key: rt-destination
   view: akgRoutes
 
 akgRoutes:
